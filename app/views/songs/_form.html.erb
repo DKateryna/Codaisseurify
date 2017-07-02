@@ -1,11 +1,23 @@
 <%= form_for @song do |s| %>
 
+  <ul>
+    <% @song.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+
+
   <%= s.label :name %>
   <%= s.text_field :name %>
 
   <%= s.label :video_url %>
   <%= s.text_field :video_url %>
 
+
+
   <%= s.submit (@song.new_record? ? "Create" : "Update") %>
+
+  <%= s.label :artist_id %>
+  <%= s.collection_select(:artist_id, Artist.all, :id, :name) %>
 
 <% end %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :artists
  # root "artists#index"
 
   get "artists" => "artists#index"
