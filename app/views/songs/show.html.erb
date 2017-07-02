@@ -1,3 +1,13 @@
 <h1><%= @song.name %></h1>
 
-<p>Link to the song: <%= link_to video_url @song.video_url %></p>
+<p>Link to the song: </p>
+<%= link_to video_url @song.video_url %>
+
+<hr>
+
+<%= link_to "[Edit]", edit_song_path(@song.id) %>
+<%= link_to "[Delete]", song_path(@song.id), method: :delete, data: { confirm: "Are you sure?" } %>
+
+    <br><br>
+    <hr>
+    <%= link_to "[All Songs]", root_path %>

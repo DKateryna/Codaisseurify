@@ -1,0 +1,11 @@
+<%= form_for @song do |s| %>
+
+  <%= s.label :name %>
+  <%= s.text_field :name %>
+
+  <%= s.label :video_url %>
+  <%= s.text_field :video_url %>
+
+  <%= s.submit (@song.new_record? ? "Create" : "Update") %>
+
+<% end %>
