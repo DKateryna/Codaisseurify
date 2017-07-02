@@ -3,6 +3,7 @@
 <p>
   <strong>Name:</strong>
   <%= @artist.name %>
+  <p> Image: <%= image_tag @artist.image_url %></p>
 </p>
 
 <h4>List of Songs</h4>
@@ -18,4 +19,5 @@
 <% end %>
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artist_path %>
+<%= link_to 'Back', artists_path %>
+<%= link_to "[Delete]", artist_path(@artist.id), method: :delete, data: { confirm: "Are you sure?" } %>

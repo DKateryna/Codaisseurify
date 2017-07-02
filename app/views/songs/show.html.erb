@@ -1,11 +1,12 @@
 <h1><%= @song.artist.name %></h1>
-
+<p> Image: <%= image_tag @song.artist.image_url %></p>
 <p>Link to the song: </p>
 <%= link_to video_url @song.video_url %>
 
 <hr>
 <p>Song: </p>
 <%= @song.name %>
+
 <hr>
 
 <%= link_to "[Edit]", edit_song_path(@song.id) %>

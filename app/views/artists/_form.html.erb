@@ -1,0 +1,20 @@
+<%= form_for @artist do |a| %>
+
+  <ul>
+    <% @artist.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+
+
+  <%= a.label :name %>
+  <%= a.text_field :name %>
+
+  <%= a.label :image_url %>
+  <%= a.text_field :image_url %>
+
+
+
+  <%= a.submit (@artist.new_record? ? "Create" : "Update") %>
+
+<% end %>
