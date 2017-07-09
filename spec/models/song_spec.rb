@@ -2,11 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Song, type: :model do
   describe "validations" do
-    it "is invalid without name" do
-      song = Song.new
-      song.valid?
-      expect(song.errors).to have_key(:name)
-    end
+    it { is_expected.to validate_presence_of(:name) }
+    it { is_expected.to validate_uniqueness_of(:name) }
+    it { is_expected.to validate_length_of(:video_url).is_at_most(255) }
   end
 
   describe ".order_by_name" do
