@@ -2,7 +2,10 @@
 
 <% @artists.each do |artist| %>
 
-<p><%= link_to artist.name, artist_path(artist.id) %></p>
+<p>
+<!--<%= image_tag artist.image_url, :size => "100x100" %>-->
+<%= link_to artist.name, artist_path(artist.id) %>
+</p>
 <% end %>
 
 <hr>

@@ -5,7 +5,7 @@ class Artist < ApplicationRecord
 
   validates :image_url, length: { maximum: 255 }, allow_blank: true
 
-  has_many :songs
+  has_many :songs, :dependent => :delete_all
 
   def self.order_by_name
     order(:name)

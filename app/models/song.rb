@@ -5,8 +5,6 @@ class Song < ApplicationRecord
 
   validates :video_url, length: { maximum: 255 }, allow_blank: true
 
-
-
   belongs_to :artist
 
   def self.order_by_name
