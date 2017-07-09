@@ -4,7 +4,7 @@ RSpec.describe Song, type: :model do
   describe "validations" do
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_uniqueness_of(:name) }
-    it { is_expected.to validate_length_of(:video_url).is_at_most(255) }
+    it { is_expected.to validate_length_of(:audio_url).is_at_most(255) }
   end
 
   describe ".order_by_name" do

@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  video_url: MyString
+  audio_url: MyString
 
 two:
   name: MyString
-  video_url: MyString
+  audio_url: MyString

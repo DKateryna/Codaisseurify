@@ -2,7 +2,7 @@ class Song < ApplicationRecord
 
   validates :name, presence: true
   validates :name, uniqueness: true
-  validates :video_url, length: { maximum: 255 }, allow_blank: true
+  validates :audio_url, length: { maximum: 255 }, allow_blank: true
 
   belongs_to :artist
 

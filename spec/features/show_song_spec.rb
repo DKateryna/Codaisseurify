@@ -8,7 +8,7 @@ describe "Viewing an individual song" do
     visit song_url(song)
 
     expect(page).to have_text(song.name)
-    expect(page).to have_text(song.video_url)
+    expect(page).to have_text(song.audio_url)
     expect(page).to have_text(artist.name)
 
 
