@@ -1,9 +1,9 @@
 <h1>Songs</h1>
 
 <% @songs.each do |song| %>
-  <p><%= link_to song.name, song_path(song.id) %></p>
+  <p><%= link_to song.name, artist_songs_path(song.id) %></p>
 <% end %>
 <hr>
-<%= link_to "[New Song]", new_song_path %>
+<%= link_to "[New Song]", new_artist_song_path([:artist_id]) %>
 <%= link_to '[All Artists]', artists_path %>
 <%= link_to "[New Artist]", new_artist_path %>

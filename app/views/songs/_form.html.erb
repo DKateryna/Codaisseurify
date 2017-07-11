@@ -1,4 +1,4 @@
-<%= form_for @song do |s| %>
+<%= form_for ([@artist, @song]) do |f| %>
 
   <ul>
     <% @song.errors.full_messages.each do |msg| %>
@@ -7,18 +7,18 @@
   </ul>
 
 
-  <%= s.label :name %>
-  <%= s.text_field :name %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
-  <%= s.label :audio_url %>
-  <%= s.text_field :audio_url %>
+  <%= f.label :audio_url %>
+  <%= f.text_field :audio_url %>
 
 
 
-  <%= s.submit (@song.new_record? ? "Create" : "Update") %>
+  <%= f.submit (@song.new_record? ? "Create" : "Update") %>
 
-  <%= s.label :artist_id %>
-  <%= s.collection_select(:artist_id, Artist.all, :id, :name) %>
+  <%= f.label :artist_id %>
+  <%= f.collection_select(:artist_id, Artist.all, :id, :name) %>
 
 <% end %>
 <br>
