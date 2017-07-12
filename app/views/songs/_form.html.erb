@@ -1,4 +1,4 @@
-<%= form_for ([@artist, @song]) do |f| %>
+<%= form_for [@song.artist, @song] do |f| %>
 
   <ul>
     <% @song.errors.full_messages.each do |msg| %>
@@ -22,4 +22,4 @@
 
 <% end %>
 <br>
-<%= link_to '[Back]', songs_path %>
+<%= link_to '[Back]', artist_path(@song.artist_id) %>
