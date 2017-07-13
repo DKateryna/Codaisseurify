@@ -1,9 +1,9 @@
 Song.destroy_all
 Artist.destroy_all
 
-artist1 = Artist.create!(name: 'Yiruma', image_url: 'http://res.cloudinary.com/djzs167i3/image/upload/v1499596432/images_5_lin0b9.jpg')
-artist2 = Artist.create!(name: 'Yann Tiersen', image_url: 'http://res.cloudinary.com/djzs167i3/image/upload/v1499596303/yann_tiersen_czz4r0.jpg')
-artist3 = Artist.create!(name: 'Onuka', image_url: 'http://res.cloudinary.com/djzs167i3/image/upload/v1499596313/onuka_xmb7k7.jpg')
+artist1 = Artist.create!(name: 'Yiruma', remote_image_url: 'http://res.cloudinary.com/djzs167i3/image/upload/v1499596432/images_5_lin0b9.jpg')
+artist2 = Artist.create!(name: 'Yann Tiersen', remote_image_url: 'http://res.cloudinary.com/djzs167i3/image/upload/v1499596303/yann_tiersen_czz4r0.jpg')
+artist3 = Artist.create!(name: 'Onuka', remote_image_url: 'http://res.cloudinary.com/djzs167i3/image/upload/v1499596313/onuka_xmb7k7.jpg')
 
 artist_count = Artist.all.length
 puts "#{artist_count} artist were created."

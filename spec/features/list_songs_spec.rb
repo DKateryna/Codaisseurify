@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Current artist has the list of songs' do
-  let(:artist) { create :artist, image_url: 'https://goo.gl/i0S0iv' }
+  let(:artist) { create :artist, image: 'https://goo.gl/i0S0iv' }
 
   let!(:song) { create :song, artist: artist }
 
