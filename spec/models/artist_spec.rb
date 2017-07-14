@@ -25,8 +25,12 @@ RSpec.describe Artist, type: :model do
       expect(artist.songs).to include(song1)
       expect(artist.songs).to include(song2)
     end
-    it 'deletes associated songs' do
-      expect { delete :destroy, id: song.id, artist_id: @artist.id }
-    end
+
+    it { expect(artist).to have_many(:songs).dependent(:destroy) }
+    #   OR
+
+    #  it 'deletes associated song' do
+    #    expect { artist.destroy }.to change(Song, :count).by(-1)
+    #  end
   end
 end
