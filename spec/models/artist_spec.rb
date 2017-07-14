@@ -4,7 +4,7 @@ RSpec.describe Artist, type: :model do
   describe 'validations' do
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_uniqueness_of(:name) }
-    it { is_expected.to validate_length_of(:image).is_at_most(255) }
+    it { is_expected.to validate_length_of(:image) }
   end
 
   describe '.order_by_name' do
