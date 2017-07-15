@@ -6,6 +6,9 @@
   <p> Image: <%= image_tag @artist.image %></p>
 </p>
 
+<h4>New song</h4>
+<%= render "song_form" %>
+
 <h4>List of Songs</h4>
 
 <% if @artist.songs.any? %>
@@ -26,6 +29,5 @@
 <% end %>
 
 <%= link_to '[Edit]', edit_artist_path(@artist) %>
-<%= link_to "[Add Song]", new_artist_song_path(@artist.id) %>
 <%= link_to '[Back]', artists_path %>
 <%= link_to "[Delete]", artist_path(@artist.id), method: :delete, data: { confirm: "Are you sure?" } %>
