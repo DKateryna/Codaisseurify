@@ -12,7 +12,7 @@
 <h4>List of Songs</h4>
 
 <% if @artist.songs.any? %>
-  <ul>
+  <ul id="songs_list">
     <% @artist.songs.each do |song| %>
       <li>
         <%= link_to song.name, artist_song_path(@artist.id, song.id) %>
