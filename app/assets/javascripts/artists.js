@@ -6,7 +6,9 @@ function onLoadSongsSuccess(data) {
       var id = data.songs[i];
       var songUrl = `/artists/${id.artist_id}/songs/${id.id}`;
       var href = $('<a>').attr('href', songUrl).html(id.name);
-      var del = $('<a>[Delete song]</a>').attr('onClick', `confirm("Are you sure?") ? deleteSong(${id.artist_id}, ${id.id}) : true;`);
+      var del = $('<a>[Delete song]</a>')
+      .attr('onClick', `confirm("Are you sure?") ? deleteSong(${id.artist_id}, ${id.id}) : true;`)
+      .attr('name', `delete-song-${id.id}`);
       var li = $('<li>').append(href).append(del);
 
     $("#songs_list").append(li);
