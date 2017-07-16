@@ -3,16 +3,21 @@
 <p>
   <strong>Name:</strong>
   <%= @artist.name %>
-  <p> Image: <%= image_tag @artist.image %></p>
+  <br>
+  <%= image_tag @artist.image %>
 </p>
 
 <h4>New song</h4>
 <%= render "song_form" %>
 
 <h4>List of Songs</h4>
-
 <ul id="songs_list" ></ul>
 
+
+
+<a onClick="confirm('Are you sure?') ? deleteAllSongs(<%= @artist.id %>) : true;" >[Delete All Songs]</a>
+
+<hr>
 <%= link_to '[Edit]', edit_artist_path(@artist) %>
 <%= link_to '[Back]', artists_path %>
 <%= link_to "[Delete]", artist_path(@artist.id), method: :delete, data: { confirm: "Are you sure?" } %>

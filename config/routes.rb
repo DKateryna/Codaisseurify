@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :artists do
+      delete 'songs' => 'songs#destroy_all'
       resources :songs
     end
   end

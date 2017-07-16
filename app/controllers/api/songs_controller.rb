@@ -37,6 +37,12 @@ class Api::SongsController < ApplicationController
     }.to_json
   end
 
+  def destroy_all
+    songs = Artist.find(params[:artist_id]).songs
+
+    songs.each(&:destroy)
+end
+
   private
 
   def song_params

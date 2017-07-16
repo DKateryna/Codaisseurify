@@ -6,7 +6,6 @@ function onLoadSongsSuccess(data) {
       var id = data.songs[i];
       var songUrl = `/artists/${id.artist_id}/songs/${id.id}`;
       var href = $('<a>').attr('href', songUrl).html(id.name);
-      // var del = $('<a data-confirm="Are you sure?" href="#">[Delete song]</a>').attr('onClick', `deleteSong(${id.artist_id}, ${id.id});`);
       var del = $('<a>[Delete song]</a>').attr('onClick', `confirm("Are you sure?") ? deleteSong(${id.artist_id}, ${id.id}) : true;`);
       var li = $('<li>').append(href).append(del);
 
@@ -65,6 +64,15 @@ function deleteSong(artistId, songId){
   $.ajax({
     type: "DELETE",
     url: `/api/artists/${artistId}/songs/${songId}`,
+    contentType: "application/json",
+    dataType: "json"
+  }).done(loadSongsList).fail(onAddSongError);
+}
+
+function deleteAllSongs(artistId){
+  $.ajax({
+    type: "DELETE",
+    url: `/api/artists/${artistId}/songs`,
     contentType: "application/json",
     dataType: "json"
   }).done(loadSongsList).fail(onAddSongError);
