@@ -13,14 +13,14 @@
 
 <% if @artist.songs.any? %>
   <ul id="songs_list">
-    <% @artist.songs.each do |song| %>
+    <!-- <% @artist.songs.each do |song| %>
       <li>
         <%= link_to song.name, artist_song_path(@artist.id, song.id) %>
 
         <%= link_to "[Delete song]", artist_song_path(@artist.id, song.id), method: :delete, data: { confirm: "Are you sure?" } %>
       </li>
 
-    <% end %>
+    <% end %> -->
 
   </ul>
 
