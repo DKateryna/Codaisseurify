@@ -16,6 +16,10 @@ function onLoadSongsSuccess(data) {
 
 function loadSongsList(){
   var artist = $("#song_artist_id").val();
+  if(!artist){
+    return;
+  }
+
 
   $.ajax({
     type: "GET",

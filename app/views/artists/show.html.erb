@@ -11,22 +11,7 @@
 
 <h4>List of Songs</h4>
 
-<% if @artist.songs.any? %>
-  <ul id="songs_list">
-    <!-- <% @artist.songs.each do |song| %>
-      <li>
-        <%= link_to song.name, artist_song_path(@artist.id, song.id) %>
-
-        <%= link_to "[Delete song]", artist_song_path(@artist.id, song.id), method: :delete, data: { confirm: "Are you sure?" } %>
-      </li>
-
-    <% end %> -->
-
-  </ul>
-
-<% else %>
-  <p>There are no song for this artist.</p>
-<% end %>
+<ul id="songs_list" ></ul>
 
 <%= link_to '[Edit]', edit_artist_path(@artist) %>
 <%= link_to '[Back]', artists_path %>
