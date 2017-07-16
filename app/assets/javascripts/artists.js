@@ -78,7 +78,7 @@ function deleteAllSongs(artistId){
   }).done(loadSongsList).fail(onAddSongError);
 }
 
-$(document).ready(function() {
+document.addEventListener("turbolinks:load", function() {
   $("#add_song").bind('click', addSong);
   loadSongsList();
 
