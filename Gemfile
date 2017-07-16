@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :test do
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'database_cleaner'
 end
 
 group :development, :test do
@@ -49,6 +50,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'factory_girl_rails', '4.7.0'
   gem 'faker', '1.6.6'
+  gem "chromedriver-helper"
 
 end
 
