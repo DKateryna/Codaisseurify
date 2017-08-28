@@ -2,7 +2,7 @@ class Artist < ApplicationRecord
   validates :name, presence: true
   validates :name, uniqueness: true
 
-  validates :image, length: { maximum: 255 }, allow_blank: true
+  validates :image, file_size: { less_than: 1.megabytes }
 
   has_many :songs, dependent: :destroy
   mount_uploader :image, ImageUploader

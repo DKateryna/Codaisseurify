@@ -41,7 +41,7 @@ class Api::SongsController < ApplicationController
     songs = Artist.find(params[:artist_id]).songs
 
     songs.each(&:destroy)
-end
+  end
 
   private
 

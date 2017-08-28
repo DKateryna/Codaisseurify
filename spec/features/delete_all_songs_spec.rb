@@ -9,7 +9,6 @@ feature 'Delete song', js: true do
     visit artist_path(artist)
 
     accept_confirm do
-      sleep 1
       find('a', text: '[Delete All Songs]').click
     end
 

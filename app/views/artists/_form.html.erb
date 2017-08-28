@@ -1,4 +1,4 @@
-<%= form_for @artist do |a| %>
+<%= form_for @artist, html: { multipart: true } do |a| %>
 
   <ul>
     <% @artist.errors.full_messages.each do |msg| %>
@@ -6,12 +6,10 @@
     <% end %>
   </ul>
 
-
   <%= a.label :name %>
   <%= a.text_field :name %>
 
-  <%= a.label :image %>
-  <%= a.text_field :image %>
+  <%= a.file_field "image", type: :file, multiple: false %>
 
   <%= a.submit (@artist.new_record? ? "Create" : "Update") %>
 
