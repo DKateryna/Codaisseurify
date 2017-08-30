@@ -1,11 +1,25 @@
-<h1>Artists</h1>
+<div id="container">
+  <div id="header">
+    <h1>Artists</h1>
+  </div>
 
-<% @artists.each do |artist| %>
+  <div id="navigation">
+    <%= link_to "New Artist", new_artist_path %>
+  </div>
 
-<p>
-<%= link_to artist.name, artist_path(artist.id) %>
-</p>
-<% end %>
+  <div id="menu"></div>
 
-<hr>
-<%= link_to "[New Artist]", new_artist_path %>
+  <div class="content">
+    <% @artists.each do |artist| %>
+    <p>
+      <%= link_to artist.name, artist_path(artist.id) %>
+    </p>
+    <% end %>
+  </div>
+
+  <div id="clear"></div>
+
+  <div id="footer">
+  </div>
+</div>
+ <!-- color: #83d0f2; -->
