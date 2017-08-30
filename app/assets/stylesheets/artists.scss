@@ -6,14 +6,25 @@ body {
 }
 
 #container {
-  background: #99CC00;
+  background-image: url("top917.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 40px auto;
   width: 1000px;
   height: 600px;
+  font-family: 'Courgette', cursive;
+
+  a:link,
+  a:visited {
+    color: #83d0f2;
+    text-decoration: none;
+  }
 }
 
 #header {
-  background: #83d0f2;
+  background: black;
+  font-family: 'Courgette', cursive;
+  color: #83d0f2;
   height: 100px;
   width: 1000px;
 }
@@ -21,10 +32,24 @@ body {
 #navigation {
   background: white;
   width: 1000px;
+
+  p {
+    padding: 5px 10px;
+    background: #8FBC8F;
+    width: 100px;
+    border-radius: 25px;
+
+    a:link,
+    a:visited {
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
 }
 
 #menu {
-  background: #99CC00;
   float: left;
   width: 300px;
   height: 400px;
@@ -42,7 +67,28 @@ body {
 }
 
 #footer {
-  background: #83d0f2;
+  background: black;
   height: 80px;
   width: 1000px;
+  //
+  // ul {
+  //   overflow: auto;
+  // }
+  //
+  // ul li {
+  //   list-style-type: none;
+  //   float: left;
+  // }
+  //
+  // ul li a i {
+  //   background: #205D7A;
+  //   color: #fff;
+  //   width: 40px;
+  //   height: 40px;
+  //   border-radius: 20px;
+  //   font-size: 25px;
+  //   text-align: center;
+  //   margin-right: 10px;
+  //   padding-top: 15%;
+  // }
 }
