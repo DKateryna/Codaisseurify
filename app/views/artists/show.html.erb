@@ -1,21 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div id="container">
+  <p id="notice"><%= notice %></p>
+  <div id="header">
+    <p>
+      <strong><%= @artist.name %></strong>
 
-<p>
-  <strong><%= @artist.name %></strong>
+    </p>
+    </div>
 
-  <br>
-  <%= image_tag @artist.image %>
-</p>
-
-<h4>New song</h4>
-<%= render "song_form" %>
-
-<h4>List of Songs</h4>
-<ul id="songs_list"></ul>
-
-<a onClick="confirm('Are you sure?') ? deleteAllSongs(<%= @artist.id %>) : true;">[Delete All Songs]</a>
-
-<hr>
-<%= link_to '[Edit]', edit_artist_path(@artist) %>
-<%= link_to '[Back]', artists_path %>
-<%= link_to "[Delete]", artist_path(@artist.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  <div id="navigation">
+    <nav>
+      <%= link_to '[Edit] ', edit_artist_path(@artist) %>
+      <%= link_to '[Back] ', artists_path %>
+      <%= link_to "[Delete]", artist_path(@artist.id), method: :delete, data: { confirm: "Are you sure?" } %>
+    </nav>
+  </div>
+  <div id="menu">
+    <h4>New song</h4>
+    <%= render "song_form" %>
+  </div>
+  <div id="content">
+    <%= image_tag @artist.image %>
+    <h4>List of Songs</h4>
+    <ul id="songs_list"></ul>
+  </div>
+  <div id="clear"></div>
+  <a onClick="confirm('Are you sure?') ? deleteAllSongs(<%= @artist.id %>) : true;">[Delete All Songs]</a>
+  <div id="footer"></div>
+</div>
