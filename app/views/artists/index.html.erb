@@ -12,7 +12,7 @@
 
   <div id="menu"></div>
 
-  <div class="content">
+  <div id="content" class="home-page">
     <% @artists.each do |artist| %>
     <p>
       <%= link_to artist.name, artist_path(artist.id) %>
