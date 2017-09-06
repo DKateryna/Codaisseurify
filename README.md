@@ -1,24 +1,9 @@
-# README
+# Playlist - Ruby on Rails practice application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I created this project to practice in RoR while studying in Codaisseur bootcamp.
 
-Things you may want to cover:
+# Featuring
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Some AJAX
+* Integration Tests
+* Cloudinary Integration
