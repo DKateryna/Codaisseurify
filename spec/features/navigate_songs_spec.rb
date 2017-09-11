@@ -4,11 +4,11 @@ describe 'Navigating songs' do
   let(:artist) { create :artist }
   let!(:song) { create :song, artist: artist }
 
-  it 'navigate fron all artists to one' do
+  it 'navigate from all artists to one' do
     visit artists_url
     click_link artist.name
 
-    expect(page).to have_text('Name: ', artist.name)
+    expect(page).to have_text(artist.name)
     expect(page).to have_text('List of Songs')
     expect(current_path).to eq(artist_path(artist.id))
   end
