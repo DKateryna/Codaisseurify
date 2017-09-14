@@ -9,7 +9,7 @@ feature 'Delete song', js: true do
     visit artist_path(artist)
 
     accept_confirm do
-      find('a', text: '[Delete All Songs]').click
+      find('a', text: 'Delete All Songs').click
     end
 
     expect(page).not_to have_content('song name1')
