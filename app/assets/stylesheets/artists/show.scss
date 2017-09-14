@@ -1,0 +1,40 @@
+body { margin: 0; }
+.header {
+  font-family: 'Courgette', cursive;
+}
+
+.columnsContainer, header { position: relative; margin: .5em; }
+
+.leftColumn, .rightColumn, header {  border: 1px solid  #ccc; padding: 1.25em;
+  a { font-family: 'Bree Serif', serif;}
+  a:link, a:visited { text-decoration: none; color: black}
+}
+
+.leftColumn { margin-bottom: .5em; }
+
+
+.nav {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  .button {
+    padding: 5px 10px;
+    width: 100px;
+    border-radius: 25px;
+  }
+
+  a:link, a:visited {
+    background-color: #83d0f2;
+    color: black;
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+}
+
+@media screen and (min-width: 47.5em ) {
+  .leftColumn { position: absolute; top: 0; right: 0; width: 18.75em; }
+
+	.rightColumn { margin-right: 19.5em; }}

@@ -1,20 +1,18 @@
 <%= form_for @artist, html: { multipart: true } do |a| %>
 
-  <ul>
-    <% @artist.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-    <% end %>
-  </ul>
+<ul>
+  <% @artist.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+</ul>
 
-  <%= a.label :name %>
-  <%= a.text_field :name %>
+<%= a.label :name %>
+<%= a.text_field :name %>
 
-  <%= a.file_field "image", type: :file, multiple: false %>
+<%= a.file_field "image", type: :file, multiple: false %>
 
-  <%= a.submit (@artist.new_record? ? "Create" : "Update") %>
-
-  <hr>
-
-  <%= link_to 'Back', artist_path(@artist.id) %>
+<%= a.submit (@artist.new_record? ? "Create" : "Update") %>
+<br>
 
 <% end %>
+<%= link_to 'Back', artists_path %>

@@ -1,24 +1,26 @@
 <body>
-  <h1>
-    <strong><%= @artist.name %></strong>
-  </h1>
+  <div class="header">
+    <h1>
+      <strong><%= @artist.name %></strong>
+    </h1>
+  </div>
 
   <div class="columnsContainer">
 
     <div class="leftColumn">
-      <%= image_tag @artist.image, :width=>240, :height=>240, :crop=>"limit" %>
+      <%= image_tag @artist.image, width:240, height:240, crop:"limit" %>
     </div>
 
     <div class="rightColumn">
-      <h4>List of Songs</h4>
+      <h3>List of Songs</h3>
       <ul id="songs_list">
       </ul>
-      <a onClick="confirm('Are you sure?') ? deleteAllSongs(<%= @artist.id %>) : true;">Delete All Songs</a>
+      <a onClick="confirm('Are you sure you want to delete all songs?') ? deleteAllSongs(<%= @artist.id %>) : true;">Delete All Songs</a>
     </div>
   </div>
 
   <br>
-  <h2>New song</h2>
+  <h3>New song</h3>
   <%= render "song_form" %>
   <br>
   <div class="nav inline-items">
