@@ -15,4 +15,8 @@
 <br>
 
 <% end %>
-<%= link_to 'Back', artists_path %>
+<%=
+  link_to_if @artist.new_record?, "Back", artists_path do
+    link_to "Back", artist_path(@artist.id)
+  end
+%>
