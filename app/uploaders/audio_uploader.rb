@@ -1,5 +1,5 @@
 # encoding: utf-8
 
 class AudioUploader < CarrierWave::Uploader::Base
-  include Cloudinary::CarrierWave
+  include Cloudinary::CarrierWave::Audio
 end
