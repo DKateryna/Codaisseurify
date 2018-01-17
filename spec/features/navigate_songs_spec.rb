@@ -13,15 +13,16 @@ describe 'Navigating songs' do
     expect(current_path).to eq(artist_path(artist.id))
   end
 
-  it 'navigation from the one_artist page to the song page' do
-    visit artist_songs_url(artist.id)
+  # it 'navigation from the one_artist page to the song page' do
+#   visit artist_songs_url(artist.id)
+#
+#   click_link song.name
+#
+#   expect(page).to have_text(artist.name)
+#   expect(page).to have_text('Song:', song.name)
+#   expect(page).to have_text('[All Songs]')
+#
+#   expect(current_path).to eq(artist_song_path(artist.id, song.id))
+# end
 
-    click_link song.name
-
-    expect(page).to have_text(artist.name)
-    expect(page).to have_text('Song:', song.name)
-    expect(page).to have_text('[All Songs]')
-
-    expect(current_path).to eq(artist_song_path(artist.id, song.id))
-  end
 end
