@@ -1,11 +1,11 @@
 <h1><%= @song.artist.name %></h1>
 
-<p>Link to the song: </p>
-<%= link_to @song.audio_url, @song.audio_url, target: :_blank %>
 
-<hr>
-<p>Song: </p>
-<%= @song.name %>
+<p>Song: <b><%= @song.name %></b> </p> <br>
+
+<audio controls>
+  <source src="<%= @song.audio_url %>" type="audio/mpeg">
+</audio>
 
 <hr>
 

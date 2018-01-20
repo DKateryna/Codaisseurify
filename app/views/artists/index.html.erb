@@ -10,7 +10,9 @@
   <div class="rightColumn">
     <% @artists.each do |artist| %>
       <ul>
-          <%= link_to artist.name, artist_path(artist.id) %>
+          <%= link_to artist.name, artist_path(artist.id) %> <br>
+          <%= image_tag artist.image, width:200, height:200, crop:"limit" %>
+          <hr>
       </ul>
     <% end %>
   </div>
